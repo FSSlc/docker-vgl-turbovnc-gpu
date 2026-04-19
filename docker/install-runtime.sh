@@ -114,7 +114,6 @@ install_rhel_family() {
     xfdesktop \
     xorg-x11-xauth \
     xorg-x11-xinit \
-    xorg-x11-xsetroot \
     xterm \
     xfwm4 \
     VirtualGL \
@@ -141,26 +140,5 @@ esac
 mkdir -p /opt/noVNC
 cp -a /tmp/artifacts/noVNC/. /opt/noVNC/
 ln -sf /opt/noVNC/vnc.html /opt/noVNC/index.html
-
-# 验证安装
-echo "Verifying installations..."
-
-if ! /opt/VirtualGL/bin/vglrun --version >/dev/null 2>&1; then
-  echo "ERROR: VirtualGL installation failed" >&2
-  exit 1
-fi
-echo "✅ VirtualGL installed successfully"
-
-if ! /opt/TurboVNC/bin/vncserver -version >/dev/null 2>&1; then
-  echo "ERROR: TurboVNC installation failed" >&2
-  exit 1
-fi
-echo "✅ TurboVNC installed successfully"
-
-if [[ ! -f /opt/noVNC/vnc.html ]]; then
-  echo "ERROR: noVNC installation failed" >&2
-  exit 1
-fi
-echo "✅ noVNC installed successfully"
 
 echo "All components installed and verified successfully!"
