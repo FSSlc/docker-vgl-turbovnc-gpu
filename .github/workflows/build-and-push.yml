@@ -115,7 +115,7 @@ jobs:
           docker run --rm \
             -e VNC_PASSWORD=testpass123 \
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ matrix.distro }}-latest \
-            /opt/TurboVNC/bin/vncserver -version
+            /opt/TurboVNC/bin/Xvnc -version
 
   summary:
     needs: [prepare, build]

@@ -64,7 +64,7 @@ jobs:
       - name: Test TurboVNC (amd64)
         run: |
           docker run --rm --platform linux/amd64 vgl-test:${{ matrix.distro }}-amd64 \
-            /opt/TurboVNC/bin/vncserver -version
+            /opt/TurboVNC/bin/Xvnc -version
 
       - name: Test entrypoint (amd64)
         run: |
@@ -86,7 +86,7 @@ jobs:
       - name: Test TurboVNC (arm64)
         run: |
           docker run --rm --platform linux/arm64 vgl-test:${{ matrix.distro }}-arm64 \
-            /opt/TurboVNC/bin/vncserver -version
+            /opt/TurboVNC/bin/Xvnc -version
 
       - name: Test entrypoint (arm64)
         run: |

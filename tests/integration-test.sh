@@ -58,7 +58,7 @@ if ! docker exec "${container_id}" /opt/VirtualGL/bin/vglrun --version >/dev/nul
 fi
 
 echo "Testing TurboVNC..."
-if ! docker exec "${container_id}" /opt/TurboVNC/bin/vncserver -version >/dev/null 2>&1; then
+if ! docker exec "${container_id}" /opt/TurboVNC/bin/Xvnc -version >/dev/null 2>&1; then
   echo "ERROR: TurboVNC not working" >&2
   exit 1
 fi
