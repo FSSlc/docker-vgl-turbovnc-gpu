@@ -49,7 +49,7 @@ jobs:
             DISTROS="${{ github.event.inputs.distros }}"
             MATRIX=$(echo "${DISTROS}" | jq -R 'split(",") | map({distro: .})')
           else
-            MATRIX='[{"distro":"ubuntu2404","priority":"high"},{"distro":"ubuntu2204","priority":"high"},{"distro":"ubuntu2004","priority":"low"},{"distro":"debian13","priority":"high"},{"distro":"debian12","priority":"low"},{"distro":"rocky9","priority":"high"},{"distro":"rocky8","priority":"low"},{"distro":"alma9","priority":"high"},{"distro":"alma8","priority":"low"},{"distro":"fedora40","priority":"medium"},{"distro":"fedora39","priority":"low"}]'
+            MATRIX='[{"distro":"ubuntu2404","priority":"high"},{"distro":"ubuntu2204","priority":"high"},{"distro":"debian13","priority":"high"},{"distro":"debian12","priority":"low"},{"distro":"rocky9","priority":"high"},{"distro":"rocky8","priority":"low"},{"distro":"alma9","priority":"high"},{"distro":"alma8","priority":"low"},{"distro":"fedora40","priority":"medium"},{"distro":"fedora39","priority":"low"}]'
           fi
           echo "matrix=${MATRIX}" >> $GITHUB_OUTPUT
           echo "Build matrix: ${MATRIX}"

@@ -8,7 +8,6 @@ ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}").." && pwd)"
 DISTROS=(
   "ubuntu2404"
   "ubuntu2204"
-  "ubuntu2004"
   "debian13"
   "debian12"
   "rocky9"

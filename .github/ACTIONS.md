@@ -178,9 +178,9 @@ act -j build
 
 | 优先级 | 发行版 | 说明 |
 |--------|--------|------|
-| **high** | ubuntu2404, ubuntu2204, debian12, rocky9, alma9 | 推荐的生产环境发行版 |
+| **high** | ubuntu2404, ubuntu2204, debian13, rocky9, alma9 | 推荐的生产环境发行版 |
 | **medium** | fedora40 | 较新的技术栈 |
-| **low** | ubuntu2004, debian11, rocky8, alma8, fedora39 | 旧版本或即将过期 |
+| **low** | debian12, rocky8, alma8, fedora39 | 旧版本或即将过期 |
 
 ### 并行构建
 
